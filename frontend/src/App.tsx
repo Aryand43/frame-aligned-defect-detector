@@ -1,10 +1,30 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import UploadForm from './UploadForm';
 import OutputDisplay from './OutputDisplay';
-import './App.css';
+
+interface OutputParams {
+  t: string | null;
+  x: string | null;
+  y: string | null;
+  z: string | null;
+  a: string | null;
+  c: string | null;
+  meltpoolSize: string | null;
+  meltpoolTemp: string | null;
+  LaserPower: string | null;
+  stirrerValue_1: string | null;
+  revolutionSpeed_1: string | null;
+  powderGasFlow_1: string | null;
+  stirrerValue_2: string | null;
+  revolutionSpeed_2: string | null;
+  powderGasFlow_2: string | null;
+  flowWatch: string | null;
+  meltpoolThreshold: string | null;
+  protectionGlasTemperature: string | null;
+}
 
 function App() {
-  const [outputParams, setOutputParams] = useState({
+  const [outputParams, setOutputParams] = useState<OutputParams>({
     t: null,
     x: null,
     y: null,
